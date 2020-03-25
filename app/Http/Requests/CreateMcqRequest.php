@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateMcq extends FormRequest
+class CreateMcqRequest extends FormRequest
 {
     public function authorize()
     {
