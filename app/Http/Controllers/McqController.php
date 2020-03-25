@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\CreateMcq;
+use App\Http\Requests\CreateMcqRequest;
 use App\Question;
 
 class McqController extends Controller
@@ -15,7 +15,7 @@ class McqController extends Controller
         return view('mcq.create' ,compact('question'));
     }
 
-    public function store( CreateMcq $mcq, Question $question)
+    public function store( CreateMcqRequest $mcq, Question $question)
     {
 
         dd($mcq->all());
