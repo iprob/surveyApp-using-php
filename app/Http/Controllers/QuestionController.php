@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Question;
-use App\Http\Requests\CreateQuestion;
+use App\Http\Requests\CreateQuestionRequest;
 
 
 class QuestionController extends Controller
@@ -20,7 +20,7 @@ class QuestionController extends Controller
 
     }
 
-    public function store(Question $question, CreateQuestion $request){
+    public function store(Question $question, CreateQuestionRequest $request){
 
         
         $question->title = $request->title;

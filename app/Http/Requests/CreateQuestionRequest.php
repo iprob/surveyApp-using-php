@@ -6,12 +6,9 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use App\Question;
 
-class CreateQuestion extends FormRequest
+class CreateQuestionRequest extends FormRequest
 {
-    private $title;
-    private $purpose;
-
-
+    
 
     public function authorize()
     {
@@ -31,16 +28,6 @@ class CreateQuestion extends FormRequest
             'purpose' => ['required'],
 
         ];
-
-        // if($this->route('questions'))
-        // {
-        //     $rules['title'] = Rule::unique('questions')->ignore($this->route('question')->id);
-        //     $rules['purpose'] = Rule::unique('questions')->ignore($this->route('question')->id);
-        // }
-        // else
-        // {
-        //     $rules['title'] = Rule::unique('questions');
-        // }
 
         return $rules;
     }
