@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateMcqRequest;
 use App\Question;
@@ -15,17 +15,13 @@ class McqController extends Controller
         return view('mcq.create' ,compact('question'));
     }
 
-    public function store( CreateMcqRequest $mcq, Question $question)
+    public function store( CreateMcqRequest $request, Question $questions)
     {
 
-        dd($mcq->all());
-        
-        //$questtion->mcq()->create($mcq);
 
-        foreach ($variable as $key => $value) {
-            # code...
-        }
+         $question=$questions->mcq()->create($request['mcq']);
+          $question=answer()->createMany($request['answers']);
 
-        //return view('mcq.create' ,compact('question'));
+        return view('/question');
     }
 }
