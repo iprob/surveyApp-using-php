@@ -10,7 +10,7 @@
                 <div class="card-body">
                 
                 @foreach ($questions as $question)
-                <a href="{{url('/question/'.$question->id)}}" class="btn btn-dark">
+                <a href="/question/{{$question->id}}" class="btn btn-dark">
                     <div class="card-body">
                         <h3>{{$question->title}}</h3>
                     </div>

@@ -32,3 +32,6 @@ Route::get('/question/{question}/edit','QuestionController@edit');
 Route::get('/question/{question}/mcq/create','McqController@create');
 Route::post('/question/{question}/mcq','McqController@store');
 
+#survey Route
+
+Route::get('/question/{question}-{slug}', 'SurveyController@show');

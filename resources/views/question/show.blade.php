@@ -12,7 +12,8 @@
 
                 <div class="card-body">
                     <a class="btn btn-dark" href="/question/{{$question->id}}/mcq/create">Create MCQ</a>
-                    <a class="btn btn-primary" href="/question/{{$question->id}}/mcq/create">Take Servey</a>
+                    <a class="btn btn-success" href="/question/{{$question->id}}-{{Str::slug($question->title)}}">Take Servey</a>
+                    <a class="btn btn-dark" href="/home">Home</a>
                 </div>
                 
             </div>
@@ -30,7 +31,6 @@
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 
                                                 {{$answer->answer}}
-                                            {{-- <span class="badge badge-primary badge-pill">14</span> --}}
                                             </li>
                                         </ul>
                                     @endforeach
