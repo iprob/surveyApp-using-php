@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Question;
 use App\Answer;
+use App\Survey;
 
 class Mcq extends Model
 {
@@ -19,4 +20,5 @@ class Mcq extends Model
     {
         return $this->hasMany(Answer::class);
     }
+
 }
