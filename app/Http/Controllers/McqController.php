@@ -15,12 +15,10 @@ class McqController extends Controller
         return view('mcq.create' ,compact('question'));
     }
 
-    public function store( CreateMcqRequest $request, Question $questions)
+    public function store( CreateMcqRequest $request, Question $question)
     {
-
-
-         $question=$questions->mcq()->create($request['mcq']);
-          $question=answer()->createMany($request['answers']);
+        $mcq = $question->mcq()->create($request->input('mcq'));
+        $mcq->answers()->createMany($request->input('answers'));
 
         return view('/question');
     }
