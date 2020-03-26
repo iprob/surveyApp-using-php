@@ -35,6 +35,9 @@ class QuestionController extends Controller
 
     public function show(Question $question)
     {
+
+        $question->load('mcq.answers');
+        //dd($question);
         return view('question.show', compact('question'));
     }
     public function edit(Question $question)
