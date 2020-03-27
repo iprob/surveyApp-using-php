@@ -7,7 +7,7 @@ use App\Survey;
 
 class Response extends Model
 {
-    protected $gaurded =[];
+    protected $guarded=[];
     
     public function survey()
     {

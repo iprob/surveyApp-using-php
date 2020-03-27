@@ -23,6 +23,7 @@ Auth::routes();
 #survey Route
 
 Route::get('/question/{question}-{slug}', 'SurveyController@show');
+Route::post('/survey/{question}-{slug}', 'SurveyController@store');
 
 #Question Route
 

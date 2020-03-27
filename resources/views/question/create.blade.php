@@ -8,7 +8,7 @@
             @csrf
             <div class="form-group">
               <label for="title">Title</label>
-            <input name ="title" type="title" class="form-control" id="exampleInputtitle" aria-describedby="titleHelp" placeholder="Enter title" value="{{old('title')}}">
+            <input  name ="title" type="title" class="form-control" id="exampleInputtitle" aria-describedby="titleHelp" placeholder="Enter title" value="{{old('title')}}">
               <small id="titleHelp" class="form-text text-muted">Set the new quectionnire title.</small>
 
                 @error('title')
